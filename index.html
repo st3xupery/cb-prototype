@@ -1,0 +1,51 @@
+
+<html lang="en"></html>
+<head>
+  <title>All Seating Chair Builder</title>
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="./css/main.css" rel="stylesheet"/>
+</head>
+<body ng-app="allSeating" ng-controller="ChairBuilderCtrl">
+  <div class="container">
+    <h1 class="page-header">Chair Builder<small> </small>Swatches Prototype</h1>
+    <div class="row">
+      <div id="chair-canvas" class="one-half column"></div>
+      <div class="one-half column">
+        <div id="chair-builder">
+          <form>
+            <div id="fabrics">
+              <h4>Fabric Options</h4>
+              <div id="swatches" dragdrop="" file="swatchFile" file-name="swatchFileName" on-file-drop="loadSwatchUrl" class="grid">
+                <div ng-repeat="swatch in swatches" ng-hide="swatch.hide" ng-click="activeChair.loadSwatch(swatch)" ng-model="$parent.selection.swatch" btn-radio="swatch.fileName" class="thumbnail">
+                  <canvas swatch="swatch.image" scale="swatch.scale" width="80px" height="80px" class="thumbnail"></canvas><span ng-show="swatch.imported" ng-click="removeSwatch(swatch); $event.stopPropagation();" class="remove-icon"><i class="fa fa-times"></i></span>
+                </div>
+              </div>
+              <form class="u-full-width u-cf">
+                <label>Add your own swatch</label>
+                <input type="url" ng-model="swatchUrl" placeholder="Enter URL" class="u-full-width"/>
+                <input type="submit" value="Submit" ng-click="loadSwatchUrl(swatchUrl)" class="u-pull-right button-primary"/>
+              </form>
+            </div>
+            <div id="arms">
+              <h4>Arms</h4>
+              <div ng-repeat="arm in arms" ng-click="activeChair.changeHardware('arms', arm)" ng-model="$parent.selection.arms" btn-radio="arm.fileName" class="thumbnail">
+                <canvas swatch="arm.image" scale="arm.scale" width="80px" height="80px" class="thumbnail"></canvas>
+              </div>
+            </div>
+            <div id="bases">
+              <h4>Base Options</h4>
+              <div ng-repeat="base in bases" ng-click="activeChair.changeHardware('bases', base)" ng-model="$parent.selection.base" btn-radio="base.fileName" class="thumbnail">
+                <canvas swatch="base.image" scale="base.scale" width="80px" height="80px" class="thumbnail"></canvas>
+              </div>
+            </div>
+            <input type="submit" value="Summarize" ng-click="showModal()" class="button-primary"/>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../bower_components/angular/angular.min.js"></script>
+<script src="../bower_components/kineticjs/kinetic.min.js"></script>
+<script src="../bower_components/angular-modal/modal.min.js"></script>
+<script src="js/main.min.js"></script>

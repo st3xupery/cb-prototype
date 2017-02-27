@@ -1,0 +1,1636 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+
+
+  <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-d876e21057f406b37686f3dc7b9666f5957cda4847a48ec11e040df065624617.css" media="all" rel="stylesheet" />
+  <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-05196ad2eeaad9504e7bb3adc33d4d19adc2bad851a35ed9b9b0f73702c554f5.css" media="all" rel="stylesheet" />
+  
+  
+  <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/site-dd6d43570c14503704e8983a7dd8e62484a668da1ce4ce997929ae2f367584c0.css" media="all" rel="stylesheet" />
+  
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>bootstrap/src at master · angular-ui/bootstrap · GitHub</title>
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+
+  <link rel="assets" href="https://assets-cdn.github.com/">
+  
+  <meta name="pjax-timeout" content="1000">
+  
+  <meta name="request-id" content="CA60:11061:280FEBF:407EDE2:58B30BC5" data-pjax-transient>
+  
+
+  <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+  <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+<meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="https://collector.githubapp.com/github-external/browser_event" name="octolytics-event-url" /><meta content="CA60:11061:280FEBF:407EDE2:58B30BC5" name="octolytics-dimension-request_id" />
+<meta content="/&lt;user-name&gt;/&lt;repo-name&gt;/files/disambiguate" data-pjax-transient="true" name="analytics-location" />
+
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged Out">
+
+
+
+      <meta name="hostname" content="github.com">
+  <meta name="user-login" content="">
+
+      <meta name="expected-hostname" content="github.com">
+    <meta name="js-proxy-site-detection-payload" content="MTA2MjA4ZjdlYzQ0NDRkZWUzMTMyOWQ0NDMzMmQ0ZGZjM2NiMjUzOTM1MWRmZDE3YjhmZDY3ZGU3ODhhMzcwMHx7InJlbW90ZV9hZGRyZXNzIjoiMTc0LjExNy43OC4yNDQiLCJyZXF1ZXN0X2lkIjoiQ0E2MDoxMTA2MToyODBGRUJGOjQwN0VERTI6NThCMzBCQzUiLCJ0aW1lc3RhbXAiOjE0ODgxMjg5NjUsImhvc3QiOiJnaXRodWIuY29tIn0=">
+
+
+  <meta name="html-safe-nonce" content="046fc483f63c0a476829413e4b78a0d500427943">
+
+  <meta http-equiv="x-pjax-version" content="d315960581ecedf86906f3f215b9732a">
+  
+
+    
+  <meta name="description" content="Native AngularJS (Angular) directives for Bootstrap. Smaller footprint (20kB gzipped), no 3rd party JS dependencies (jQuery, bootstrap JS) required. Please read the README.md file before submitting an issue!">
+  <meta name="go-import" content="github.com/angular-ui/bootstrap git https://github.com/angular-ui/bootstrap.git">
+
+  <meta content="1530011" name="octolytics-dimension-user_id" /><meta content="angular-ui" name="octolytics-dimension-user_login" /><meta content="6094683" name="octolytics-dimension-repository_id" /><meta content="angular-ui/bootstrap" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="6094683" name="octolytics-dimension-repository_network_root_id" /><meta content="angular-ui/bootstrap" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/angular-ui/bootstrap/commits/master.atom" rel="alternate" title="Recent Commits to bootstrap:master" type="application/atom+xml">
+
+
+    <link rel="canonical" href="https://github.com/angular-ui/bootstrap/tree/master/src" data-pjax-transient>
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+
+  </head>
+
+  <body class="logged-out env-production vis-public">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+
+    
+    
+    
+
+
+
+          <header class="site-header js-details-container Details" role="banner">
+  <div class="container-responsive">
+    <a class="header-logo-invertocat" href="https://github.com/" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="32" version="1.1" viewBox="0 0 16 16" width="32"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+    </a>
+
+    <button class="btn-link float-right site-header-toggle js-details-target" type="button" aria-label="Toggle navigation">
+      <svg aria-hidden="true" class="octicon octicon-three-bars" height="24" version="1.1" viewBox="0 0 12 16" width="18"><path fill-rule="evenodd" d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"/></svg>
+    </button>
+
+    <div class="site-header-menu">
+      <nav class="site-header-nav">
+        <a href="/personal" class="js-selected-navigation-item nav-item" data-ga-click="Header, click, Nav menu - item:personal" data-selected-links="/personal /personal">
+          Personal
+</a>        <a href="/open-source" class="js-selected-navigation-item nav-item" data-ga-click="Header, click, Nav menu - item:opensource" data-selected-links="/open-source /open-source/stories /open-source">
+          Open source
+</a>        <a href="/business" class="js-selected-navigation-item nav-item" data-ga-click="Header, click, Nav menu - item:business" data-selected-links="/business /business/partners /business/features /business/customers /business/why-github-for-work /business/security /business">
+          Business
+</a>        <a href="/explore" class="js-selected-navigation-item nav-item" data-ga-click="Header, click, Nav menu - item:explore" data-selected-links="/explore /trending /trending/developers /integrations /integrations/feature/code /integrations/feature/collaborate /integrations/feature/ship /showcases /explore">
+          Explore
+</a>        <a href="/pricing" class="js-selected-navigation-item nav-item" data-ga-click="Header, click, Nav menu - item:pricing" data-selected-links="/pricing /pricing">
+          Pricing
+</a>      </nav>
+
+      <div class="site-header-actions">
+          <div class="header-search scoped-search site-scoped-search js-site-search" role="search">
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/angular-ui/bootstrap/search" class="js-site-search-form" data-scoped-search-url="/angular-ui/bootstrap/search" data-unscoped-search-url="/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <label class="form-control header-search-wrapper js-chromeless-input-container">
+      <div class="header-search-scope">This repository</div>
+      <input type="text"
+        class="form-control header-search-input js-site-search-focus js-site-search-field is-clearable"
+        data-hotkey="s"
+        name="q"
+        placeholder="Search"
+        aria-label="Search this repository"
+        data-unscoped-placeholder="Search GitHub"
+        data-scoped-placeholder="Search"
+        autocapitalize="off">
+    </label>
+</form></div>
+
+
+          <a class="text-bold" href="/login?return_to=%2Fangular-ui%2Fbootstrap%2Ftree%2Fmaster%2Fsrc" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
+            <span class="text-gray">or</span>
+            <a class="text-bold" href="/join?source=header-repo" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  </div>
+
+  <div id="start-of-content" class="accessibility-aid"></div>
+
+    <div id="js-flash-container">
+</div>
+
+
+
+  <div role="main">
+      <div itemscope itemtype="http://schema.org/SoftwareSourceCode">
+    <div id="js-repo-pjax-container" data-pjax-container>
+      
+
+
+
+<div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
+  <div class="container repohead-details-container">
+
+    
+
+<ul class="pagehead-actions">
+
+  <li>
+      <a href="/login?return_to=%2Fangular-ui%2Fbootstrap"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to watch a repository" rel="nofollow">
+    <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+    Watch
+  </a>
+  <a class="social-count" href="/angular-ui/bootstrap/watchers"
+     aria-label="860 users are watching this repository">
+    860
+  </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fangular-ui%2Fbootstrap"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to star a repository" rel="nofollow">
+    <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"/></svg>
+    Star
+  </a>
+
+    <a class="social-count js-social-count" href="/angular-ui/bootstrap/stargazers"
+      aria-label="13836 users starred this repository">
+      13,836
+    </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fangular-ui%2Fbootstrap"
+        class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+        aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+        Fork
+      </a>
+
+    <a href="/angular-ui/bootstrap/network" class="social-count"
+       aria-label="7035 users forked this repository">
+      7,035
+    </a>
+  </li>
+</ul>
+
+    <h1 class="public ">
+  <svg aria-hidden="true" class="octicon octicon-repo" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+  <span class="author" itemprop="author"><a href="/angular-ui" class="url fn" rel="author">angular-ui</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a href="/angular-ui/bootstrap" data-pjax="#js-repo-pjax-container">bootstrap</a></strong>
+
+</h1>
+
+  </div>
+  <div class="container">
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/angular-ui/bootstrap" class="js-selected-navigation-item selected reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /angular-ui/bootstrap" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-code" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a href="/angular-ui/bootstrap/issues" class="js-selected-navigation-item reponav-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /angular-ui/bootstrap/issues" itemprop="url">
+        <svg aria-hidden="true" class="octicon octicon-issue-opened" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg>
+        <span itemprop="name">Issues</span>
+        <span class="counter">178</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/angular-ui/bootstrap/pulls" class="js-selected-navigation-item reponav-item" data-hotkey="g p" data-selected-links="repo_pulls /angular-ui/bootstrap/pulls" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-git-pull-request" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="counter">41</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+  <a href="/angular-ui/bootstrap/projects" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /angular-ui/bootstrap/projects">
+    <svg aria-hidden="true" class="octicon octicon-project" height="16" version="1.1" viewBox="0 0 15 16" width="15"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+    Projects
+    <span class="counter">0</span>
+</a>
+    <a href="/angular-ui/bootstrap/wiki" class="js-selected-navigation-item reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /angular-ui/bootstrap/wiki">
+      <svg aria-hidden="true" class="octicon octicon-book" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"/></svg>
+      Wiki
+</a>
+
+  <a href="/angular-ui/bootstrap/pulse" class="js-selected-navigation-item reponav-item" data-selected-links="pulse /angular-ui/bootstrap/pulse">
+    <svg aria-hidden="true" class="octicon octicon-pulse" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M11.5 8L8.8 5.4 6.6 8.5 5.5 1.6 2.38 8H0v2h3.6l.9-1.8.9 5.4L9 8.5l1.6 1.5H14V8z"/></svg>
+    Pulse
+</a>
+  <a href="/angular-ui/bootstrap/graphs" class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors /angular-ui/bootstrap/graphs">
+    <svg aria-hidden="true" class="octicon octicon-graph" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"/></svg>
+    Graphs
+</a>
+
+</nav>
+
+  </div>
+</div>
+
+<div class="container new-discussion-timeline experiment-repo-nav">
+  <div class="repository-content">
+
+    
+<div class="file-navigation">
+  
+<div class="select-menu branch-select-menu js-menu-container js-select-menu float-left">
+  <button class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    
+    type="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <i>Branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+        <span class="select-menu-title">Switch branches/tags</span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="form-control js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/angular-ui/bootstrap/tree/0.14.x/src"
+               data-name="0.14.x"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                0.14.x
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/angular-ui/bootstrap/tree/gh-pages/src"
+               data-name="gh-pages"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                gh-pages
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+               href="/angular-ui/bootstrap/tree/master/src"
+               data-name="master"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                master
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/angular-ui/bootstrap/tree/popover-clickoff/src"
+               data-name="popover-clickoff"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                popover-clickoff
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/v1.1.0/src"
+              data-name="v1.1.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v1.1.0">
+                v1.1.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/v1.0.3/src"
+              data-name="v1.0.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v1.0.3">
+                v1.0.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/v1.0.2/src"
+              data-name="v1.0.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v1.0.2">
+                v1.0.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/v1.0.1/src"
+              data-name="v1.0.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v1.0.1">
+                v1.0.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/2.5.0/src"
+              data-name="2.5.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.5.0">
+                2.5.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/2.4.0/src"
+              data-name="2.4.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.4.0">
+                2.4.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/2.3.2/src"
+              data-name="2.3.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.3.2">
+                2.3.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/2.3.1/src"
+              data-name="2.3.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.3.1">
+                2.3.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/2.3.0/src"
+              data-name="2.3.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.3.0">
+                2.3.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/2.2.0/src"
+              data-name="2.2.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.2.0">
+                2.2.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/2.1.4/src"
+              data-name="2.1.4"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.1.4">
+                2.1.4
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/2.1.3/src"
+              data-name="2.1.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.1.3">
+                2.1.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/2.1.2/src"
+              data-name="2.1.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.1.2">
+                2.1.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/2.1.1/src"
+              data-name="2.1.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.1.1">
+                2.1.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/2.1.0/src"
+              data-name="2.1.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.1.0">
+                2.1.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/2.0.2/src"
+              data-name="2.0.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.0.2">
+                2.0.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/2.0.1/src"
+              data-name="2.0.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.0.1">
+                2.0.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/2.0.0/src"
+              data-name="2.0.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.0.0">
+                2.0.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/1.3.3/src"
+              data-name="1.3.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.3.3">
+                1.3.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/1.3.2/src"
+              data-name="1.3.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.3.2">
+                1.3.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/1.3.1/src"
+              data-name="1.3.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.3.1">
+                1.3.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/1.3.0/src"
+              data-name="1.3.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.3.0">
+                1.3.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/1.2.5/src"
+              data-name="1.2.5"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.2.5">
+                1.2.5
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/1.2.4/src"
+              data-name="1.2.4"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.2.4">
+                1.2.4
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/1.2.3/src"
+              data-name="1.2.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.2.3">
+                1.2.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/1.2.2/src"
+              data-name="1.2.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.2.2">
+                1.2.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/1.2.1/src"
+              data-name="1.2.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.2.1">
+                1.2.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/1.2.0/src"
+              data-name="1.2.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.2.0">
+                1.2.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/1.1.2/src"
+              data-name="1.1.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.1.2">
+                1.1.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/1.1.1/src"
+              data-name="1.1.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.1.1">
+                1.1.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/1.0.0/src"
+              data-name="1.0.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.0.0">
+                1.0.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.14.3/src"
+              data-name="0.14.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.14.3">
+                0.14.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.14.2/src"
+              data-name="0.14.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.14.2">
+                0.14.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.14.1/src"
+              data-name="0.14.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.14.1">
+                0.14.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.14.0/src"
+              data-name="0.14.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.14.0">
+                0.14.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.13.4/src"
+              data-name="0.13.4"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.13.4">
+                0.13.4
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.13.3/src"
+              data-name="0.13.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.13.3">
+                0.13.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.13.2/src"
+              data-name="0.13.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.13.2">
+                0.13.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.13.1/src"
+              data-name="0.13.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.13.1">
+                0.13.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.13.0/src"
+              data-name="0.13.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.13.0">
+                0.13.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.12.1/src"
+              data-name="0.12.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.12.1">
+                0.12.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.12.0/src"
+              data-name="0.12.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.12.0">
+                0.12.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.11.2/src"
+              data-name="0.11.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.11.2">
+                0.11.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.11.1/src"
+              data-name="0.11.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.11.1">
+                0.11.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.11.0/src"
+              data-name="0.11.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.11.0">
+                0.11.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.10.0/src"
+              data-name="0.10.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.10.0">
+                0.10.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.9.0/src"
+              data-name="0.9.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.9.0">
+                0.9.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.8.0/src"
+              data-name="0.8.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.8.0">
+                0.8.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.7.0/src"
+              data-name="0.7.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.7.0">
+                0.7.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.6.0/src"
+              data-name="0.6.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.6.0">
+                0.6.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.5.0/src"
+              data-name="0.5.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.5.0">
+                0.5.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.4.0/src"
+              data-name="0.4.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.4.0">
+                0.4.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.3.0/src"
+              data-name="0.3.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.3.0">
+                0.3.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.2.0/src"
+              data-name="0.2.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.2.0">
+                0.2.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/angular-ui/bootstrap/tree/0.1.0/src"
+              data-name="0.1.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="0.1.0">
+                0.1.0
+              </span>
+            </a>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <div class="BtnGroup float-right">
+    
+  <button class="btn btn-sm BtnGroup-item disabled tooltipped tooltipped-n" aria-label="You must be signed in to make or propose changes" type="button">
+    Create new file
+  </button>
+
+
+
+    <a href="/angular-ui/bootstrap/find/master" data-pjax data-hotkey="t" class="js-pjax-capture-input btn btn-sm BtnGroup-item empty-icon">
+      Find file
+    </a>
+    <a href="/angular-ui/bootstrap/commits/master/src" class="btn btn-sm BtnGroup-item empty-icon tooltipped tooltipped-nw" aria-label="Browse commits for this branch">
+      History
+    </a>
+  </div>
+  <div class="breadcrumb"><span class="repo-root js-repo-root"><span class="js-path-segment"><a href="/angular-ui/bootstrap"><span>bootstrap</span></a></span></span><span class="separator">/</span><strong class="final-path">src</strong><span class="separator">/</span></div>
+</div>
+
+
+
+
+  <div class="commit-tease js-details-container Details">
+    <span class="float-right">
+      Latest commit
+      <a class="commit-tease-sha" href="/angular-ui/bootstrap/commit/0d79005f8d1f4d674bb04ba93c41bb9c06280b4f" data-pjax>
+        0d79005
+      </a>
+      <span itemprop="dateModified"><relative-time datetime="2017-01-24T15:46:28Z">Jan 24, 2017</relative-time></span>
+    </span>
+
+
+    <span class="commit-author-section">
+      <img alt="" class="avatar" data-canonical-src="https://0.gravatar.com/avatar/950dfc43ece401094e09956b038b8f61?d=https%3A%2F%2Fassets-cdn.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png&amp;r=x&amp;s=140" height="20" src="https://camo.githubusercontent.com/73c48af420ce79d503312908170dd7b8ee8b97c1/68747470733a2f2f302e67726176617461722e636f6d2f6176617461722f39353064666334336563653430313039346530393935366230333862386636313f643d68747470732533412532462532466173736574732d63646e2e6769746875622e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d7826733d313430" width="20" />
+      <span class="user-mention">Daniel Smith</span>
+        committed with <a href="/wesleycho" class="user-mention" rel="contributor">wesleycho</a>
+    </span>
+
+        <a href="/angular-ui/bootstrap/commit/0d79005f8d1f4d674bb04ba93c41bb9c06280b4f" class="message" data-pjax="true" title="fix(angular): add compatibility with Angular 1.6
+
+- Change how ngModelOptions is used to conform to Angular 1.6
+- Catch rejections as per change to $q
+
+Closes #6427
+Fixes #6360">fix(angular): add compatibility with Angular 1.6</a>
+          <span class="hidden-text-expander inline">
+            <button type="button" class="ellipsis-expander js-details-target">&hellip;</button>
+          </span>
+    </span>
+
+      <div class="commit-desc"><pre class="text-small">- Change how ngModelOptions is used to conform to Angular 1.6
+- Catch rejections as per change to $q
+
+Closes <a href="https://github.com/angular-ui/bootstrap/pull/6427" class="issue-link js-issue-link" data-url="https://github.com/angular-ui/bootstrap/issues/6427" data-id="202913865" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#6427</a>
+Fixes <a href="https://github.com/angular-ui/bootstrap/issues/6360" class="issue-link js-issue-link" data-url="https://github.com/angular-ui/bootstrap/issues/6360" data-id="194999172" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#6360</a></pre></div>
+  </div>
+
+
+
+<div class="file-wrap">
+
+  <a href="/angular-ui/bootstrap/tree/a2dee1bdeb2af58cc5b85cc518d9f85bcea222ec/src" class="d-none js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+  <table class="files js-navigation-container js-active-navigation-container" data-pjax>
+      <tr class="up-tree js-navigation-item">
+        <td></td>
+        <td><a href="/angular-ui/bootstrap" class="js-navigation-open" rel="nofollow" title="Go to parent directory">..</a></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+
+    <tbody>
+      <tr class="warning include-fragment-error">
+        <td class="icon"><svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg></td>
+        <td class="content" colspan="3">Failed to load latest commit information.</td>
+      </tr>
+
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/accordion" class="js-navigation-open" id="bdf5f1cc5cb974c1d4e6a753320085dc-6f24dee610b3b78a553c1c9097a7fad97a597555" title="accordion">accordion</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/0d79005f8d1f4d674bb04ba93c41bb9c06280b4f" class="message" data-pjax="true" title="fix(angular): add compatibility with Angular 1.6
+
+- Change how ngModelOptions is used to conform to Angular 1.6
+- Catch rejections as per change to $q
+
+Closes #6427
+Fixes #6360">fix(angular): add compatibility with Angular 1.6</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-01-28T13:26:34Z">Jan 28, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/alert" class="js-navigation-open" id="7ed21143076d0cca420653d4345baa2f-1e2f364bf8a7264cf5a69e6df79f2e1fa384a7d0" title="alert">alert</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/0d79005f8d1f4d674bb04ba93c41bb9c06280b4f" class="message" data-pjax="true" title="fix(angular): add compatibility with Angular 1.6
+
+- Change how ngModelOptions is used to conform to Angular 1.6
+- Catch rejections as per change to $q
+
+Closes #6427
+Fixes #6360">fix(angular): add compatibility with Angular 1.6</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-01-28T13:26:34Z">Jan 28, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/buttons" class="js-navigation-open" id="02634eff3c24742057ecacbee91c4bbd-07ebed0935b1c38f29a31853594f6f320f8505ba" title="buttons">buttons</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/aec5304ef5d1d01eb2e78064c9fb141de5cca41d" class="message" data-pjax="true" title="chore(button): add known issue for tooltip/popover
+
+* add known issue to button docs indicating a CSS issue when using a tooltip or
+  a popover.
+
+Closes #5890">chore(button): add known issue for tooltip/popover</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-05-16T15:47:26Z">May 16, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/carousel" class="js-navigation-open" id="06d3aecc98edbb4cb9566d03d551bbb6-f14f86f28908e894468b90ea2f399c1aaeb1d151" title="carousel">carousel</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/86ee7708346ebcc104c2862d1d9ebdbee2682401" class="message" data-pjax="true" title="fix(carousel): remove transition buffering
+
+- Remove transition buffering
+
+Closes #6367
+Fixes #5967">fix(carousel): remove transition buffering</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-01-23T10:27:05Z">Jan 23, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/collapse" class="js-navigation-open" id="1a721faf2df53972bfd0831c64b6146d-92245ecea23dd459bc0e1fc9ee479043b4b55c8a" title="collapse">collapse</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/0d79005f8d1f4d674bb04ba93c41bb9c06280b4f" class="message" data-pjax="true" title="fix(angular): add compatibility with Angular 1.6
+
+- Change how ngModelOptions is used to conform to Angular 1.6
+- Catch rejections as per change to $q
+
+Closes #6427
+Fixes #6360">fix(angular): add compatibility with Angular 1.6</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-01-28T13:26:34Z">Jan 28, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/dateparser" class="js-navigation-open" id="aa20f702f70b0fb808a970acbc1481f3-b9bff41679720439af0a2a51d4ad91f78adb6faf" title="dateparser">dateparser</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/5a3e44a146f81ee6d182e9e5f473a161050425bc" class="message" data-pjax="true" title="feat(dateparser): allow overriding of parsers
+
+- Add ability to override parser
+
+Closes #6370
+Closes #6373">feat(dateparser): allow overriding of parsers</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-12-30T07:12:17Z">Dec 30, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/datepicker" class="js-navigation-open" id="a7f138aa0ee8e9b7d82f49ada1bd22bf-8a23290e2808a2cd9878ab49db5cc3eb2d4f5c67" title="datepicker">datepicker</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/0d79005f8d1f4d674bb04ba93c41bb9c06280b4f" class="message" data-pjax="true" title="fix(angular): add compatibility with Angular 1.6
+
+- Change how ngModelOptions is used to conform to Angular 1.6
+- Catch rejections as per change to $q
+
+Closes #6427
+Fixes #6360">fix(angular): add compatibility with Angular 1.6</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-01-28T13:26:34Z">Jan 28, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/datepickerPopup" class="js-navigation-open" id="b515ff7c90e2fa20edb6a974b4dd1d94-ec1e77bce4137833e33d4af4269c8ce6546a3d7a" title="datepickerPopup">datepickerPopup</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/0d79005f8d1f4d674bb04ba93c41bb9c06280b4f" class="message" data-pjax="true" title="fix(angular): add compatibility with Angular 1.6
+
+- Change how ngModelOptions is used to conform to Angular 1.6
+- Catch rejections as per change to $q
+
+Closes #6427
+Fixes #6360">fix(angular): add compatibility with Angular 1.6</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-01-28T13:26:34Z">Jan 28, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/debounce" class="js-navigation-open" id="c7f96522442c422bac20ae389f04863c-6dac5a2e66760c3a657c7a2b300105c2a81bec95" title="debounce">debounce</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/e645ab78a26381231b1c152c42c2ac7f3a2071e4" class="message" data-pjax="true" title="chore: add support for webpack
+
+Closes #5375">chore: add support for webpack</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-02-01T17:11:57Z">Feb 1, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/dropdown" class="js-navigation-open" id="ad973c252653a47144b79403cfb0668b-aa05eb7de1f49de6304fa721322f62a2ccba612b" title="dropdown">dropdown</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/761db7b4b7da993fe4f89a83163aa1243113ab24" class="message" data-pjax="true" title="fix(dropdown): do nothing if not open when clicking
+
+- When clicking, do nothing if dropdown is closed on document listener
+
+Closes #6414">fix(dropdown): do nothing if not open when clicking</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-01-23T11:07:20Z">Jan 23, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/isClass" class="js-navigation-open" id="e2b0171bafad83edc40ec7c033965d15-c7c0d46523838433269430cba550c9e4927f02c5" title="isClass">isClass</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/3d7191cc0664fca30591376f907c79d086a21ec8" class="message" data-pjax="true" title="chore(isClass): clean up code style">chore(isClass): clean up code style</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-04-06T22:19:38Z">Apr 6, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/modal" class="js-navigation-open" id="608ece0872fafd7131f310d6e77e9817-20df6494f651ffbacf9a5de972a1bcd74fcdd64f" title="modal">modal</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/0d79005f8d1f4d674bb04ba93c41bb9c06280b4f" class="message" data-pjax="true" title="fix(angular): add compatibility with Angular 1.6
+
+- Change how ngModelOptions is used to conform to Angular 1.6
+- Catch rejections as per change to $q
+
+Closes #6427
+Fixes #6360">fix(angular): add compatibility with Angular 1.6</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-01-28T13:26:34Z">Jan 28, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/multiMap" class="js-navigation-open" id="9c470990c36bb2779e8557df4cf0ee72-3ba8de02ece358228ff77b19dba4d0499da3e41e" title="multiMap">multiMap</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/1653afa210b9372fa342a87cb803850681e288b8" class="message" data-pjax="true" title="refactor(dropdown): use container for class toggle detection">refactor(dropdown): use container for class toggle detection</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-11-29T09:47:23Z">Nov 29, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/pager" class="js-navigation-open" id="bdf1ae909efa3161c1511c4228b530f2-b3910b9da232f36654dbae771debe5d9ac83d121" title="pager">pager</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/ba113a050e7e0fc71fe19c8ea2ed351d742d4c36" class="message" data-pjax="true" title="chore(pager): add tabindex module dep">chore(pager): add tabindex module dep</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-06-13T17:35:53Z">Jun 13, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/pagination" class="js-navigation-open" id="fe7cd4d1bf3fea9a0d921e224b3fa24c-e829aa253e21ad8e69e5771b7d9067c63c33e76c" title="pagination">pagination</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/71dc6913238b597b4a44ab79417df117ecbfc93c" class="message" data-pjax="true" title="feat(pagination): Added menu and menuitem roles (closes #6383) (#6386)
+
+feat(pagination): Added test">feat(pagination): Added menu and menuitem roles (closes</a> <a href="https://github.com/angular-ui/bootstrap/issues/6383" class="issue-link js-issue-link" data-url="https://github.com/angular-ui/bootstrap/issues/6383" data-id="196972709" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#6383</a><a href="/angular-ui/bootstrap/commit/71dc6913238b597b4a44ab79417df117ecbfc93c" class="message" data-pjax="true" title="feat(pagination): Added menu and menuitem roles (closes #6383) (#6386)
+
+feat(pagination): Added test">) (</a><a href="https://github.com/angular-ui/bootstrap/pull/6386" class="issue-link js-issue-link" data-url="https://github.com/angular-ui/bootstrap/issues/6386" data-id="197516645" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">#6386</a><a href="/angular-ui/bootstrap/commit/71dc6913238b597b4a44ab79417df117ecbfc93c" class="message" data-pjax="true" title="feat(pagination): Added menu and menuitem roles (closes #6383) (#6386)
+
+feat(pagination): Added test">)</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-01-20T21:13:54Z">Jan 20, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/paging" class="js-navigation-open" id="fee6447a1b671db315059e8e91473833-3da54a324e371cfe20661f6cf1a785494c610295" title="paging">paging</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/a35a63d4f9c5a89f2bf8c624ddcbb51eefdfc516" class="message" data-pjax="true" title="refactor(paging): remove extra
+
+Closes #5442">refactor(paging): remove extra</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-02-08T20:02:34Z">Feb 8, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/popover" class="js-navigation-open" id="2e2cdf05437ab790d32730eb8c6a415a-3b617cdd66693fd7bd9124e1abef449d0ff27afe" title="popover">popover</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/7671bd6ed4bc607e05c95ffb96b959b1e5efe2f8" class="message" data-pjax="true" title="docs(popover): add popover-class">docs(popover): add popover-class</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-09-24T04:01:31Z">Sep 24, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/position" class="js-navigation-open" id="4757fe07fd492a8be0ea6a760d683d6e-cfbac8acfc715a6c89b2e38b45a619bfb787b59a" title="position">position</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/58f1813aca15051bfe33542bff57c889f8993e0e" class="message" data-pjax="true" title="fix(position): correct scrollbar width calculation
+
+Closes #6273">fix(position): correct scrollbar width calculation</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-10-10T14:42:36Z">Oct 10, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/progressbar" class="js-navigation-open" id="b1872363c4b04e594269757b4fcffc60-7337ae4376d83ba933e2b04d21c047cbb3be4177" title="progressbar">progressbar</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/1611248daa77c81b24dc9b449f2a84de919d2b11" class="message" data-pjax="true" title="docs(progressbar): fix danger reference
+
+Closes #5854">docs(progressbar): fix danger reference</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-04-28T15:35:25Z">Apr 28, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/rating" class="js-navigation-open" id="2c5504ab9a86164db22a92dc8793843d-31a01e01eed5ffcc4f1468308b5265ee5dcdda1a" title="rating">rating</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/d6fe9c7e7a4284cdaa32f2c2299d10b540d4b70c" class="message" data-pjax="true" title="feat(rating): remove replace usage
+
+- Remove `replace: true` usage
+
+BREAKING CHANGE: Due to the removal of `replace: true`, this results in a slight change to the HTML structure - see the documentation examples to see it in action.
+
+Closes #5998">feat(rating): remove replace usage</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-06-14T03:17:38Z">Jun 14, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/stackedMap" class="js-navigation-open" id="74628391144bdb04795d848e50d1acb5-ba9be6bd93fe3e99a02d9c45627657518fd35dc7" title="stackedMap">stackedMap</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/a0758240878a33088cee26e6328c992ac66420e0" class="message" data-pjax="true" title="feat(stackedMap): improve perf of removeTop
+
+- Change `removeTop` from `slice` to `pop`
+
+Closes #5925
+Closes #5932">feat(stackedMap): improve perf of removeTop</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-05-28T14:24:25Z">May 28, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/tabindex" class="js-navigation-open" id="c86b44d46ab0dce2b928f4d833ba1d0d-2a8e2e47ca71e5c15c582ec3db21995e88766c53" title="tabindex">tabindex</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/1a870a3bb18ac1868c52b76e7a4e1b43108ba88e" class="message" data-pjax="true" title="feat(pagination): disable tabbing when disabled
+
+- Add directive for toggling `tabindex=&quot;-1&quot;` when ngDisabled is true, and removing tabindex when false
+
+Closes #5984">feat(pagination): disable tabbing when disabled</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-06-13T06:52:20Z">Jun 13, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/tabs" class="js-navigation-open" id="5db8dca30c2d7f0c2bc225ae852c5053-135bd1d49d6f5bada351ebc124664b212ffe188a" title="tabs">tabs</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/eb0277829738a8aa0531791e6e072f6efc1c01f8" class="message" data-pjax="true" title="chore(tab): code cleanup
+
+Removing unnecessary code added under PR #5489
+
+Closes #5891
+Fixes #5888">chore(tab): code cleanup</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-05-10T18:09:39Z">May 10, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/timepicker" class="js-navigation-open" id="0a348b55c7b346c6205166c353ec4c44-37152bbf3a552a2809d23b687aca2fca26cb835a" title="timepicker">timepicker</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/61f365abfd0704ab089db829a7676f5d332cd1df" class="message" data-pjax="true" title="chore(timepicker): change to on/off">chore(timepicker): change to on/off</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2016-11-29T08:18:36Z">Nov 29, 2016</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/tooltip" class="js-navigation-open" id="ddbfc1b6aa0ad4d79c5dac7aa3b44888-63ba8a3f100df76d77d951e7911ab28260aff673" title="tooltip">tooltip</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/f5b357fd1152f5462089b680fcf4a624b498185e" class="message" data-pjax="true" title="fix(tooltip): unbind keypress listener on hide
+
+- Unbind listener on hide to fix memory leak
+
+Closes #6423
+Fixes #6405">fix(tooltip): unbind keypress listener on hide</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-01-23T19:30:23Z">Jan 23, 2017</time-ago></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"/></svg>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/angular-ui/bootstrap/tree/master/src/typeahead" class="js-navigation-open" id="a8c0fa60ff17dc25041c3666f0f0a189-f85119b86ac2c5ebd40a47297ff44020c77e1585" title="typeahead">typeahead</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/angular-ui/bootstrap/commit/0d79005f8d1f4d674bb04ba93c41bb9c06280b4f" class="message" data-pjax="true" title="fix(angular): add compatibility with Angular 1.6
+
+- Change how ngModelOptions is used to conform to Angular 1.6
+- Catch rejections as per change to $q
+
+Closes #6427
+Fixes #6360">fix(angular): add compatibility with Angular 1.6</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time-ago datetime="2017-01-28T13:26:34Z">Jan 28, 2017</time-ago></span>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+
+  
+
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+
+    </div>
+  </div>
+
+  </div>
+
+      <div class="container site-footer-container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links float-right">
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact GitHub</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage" class="site-footer-mark" title="GitHub">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2017 <span title="0.08586s from github-fe120-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+  
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
+    <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+    </button>
+    You can't perform that action at this time.
+  </div>
+
+
+    <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/compat-8e19569aacd39e737a14c8515582825f3c90d1794c0e5539f9b525b8eb8b5a8e.js"></script>
+    <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-506169cb2fe76254b921e8c944dd406e5cab2d719e657eace8ada98486231472.js"></script>
+    <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-ca0d7593e02f66f0e077e6af00e2777dbc4e8928d61b88078131e9344d065f32.js"></script>
+    
+    
+    
+    
+  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+    <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+  </div>
+  <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+    </button>
+  </div>
+</div>
+
+
+  </body>
+</html>
+
